@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server"
+    "start": "http-server -o"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FumiyaShibusawa/image-resize-sample.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/FumiyaShibusawa/image-resize-sample/issues"
   },
-  "homepage": "https://github.com/FumiyaShibusawa/image-resize-sample#readme"
+  "homepage": "https://github.com/FumiyaShibusawa/image-resize-sample#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
 }
