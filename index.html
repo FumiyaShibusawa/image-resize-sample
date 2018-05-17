@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>image-resize-sample</title>
+    <style>
+      img {
+        width: 100%;
+      }
+      .image-columns {
+        display: table;
+        max-width: 800px;
+        width: 100%;
+      }
+      .image-columns.columns-1 .component {
+        display: table-cell;
+        width: 100%;
+      }
+      .image-columns.columns-2 .component {
+        display: table-cell;
+        width: 50%;
+      }
+      .image-columns.columns-3 .component {
+        display: table-cell;
+        width: 33%;
+      }
+      .image-columns.columns-4 .component {
+        display: table-cell;
+        width: 25%;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        var images = document.getElementsByClassName('image for-resize')
+        for (var i = 0; i < images.length; i++) {
+          var src_url = images[i].dataset.original + '?width=' + images[i].offsetWidth + '&height=auto';
+          images[i].setAttribute("src", src_url);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <section>
+      <h1>image-resize-sample</h1>
+      <div class="image-resize-samples">
+        <div class="image-columns columns-4">
+          <div class="component component-1">
+            <img data-original="http://13.231.242.12:8000/images/5aefe6634cfad124ee0002b2/original.jpeg" class="image for-resize">
+          </div>
+          <div class="component component-2">
+          </div>
+          <div class="component component-3">
+          </div>
+          <div class="component component-4">
+          </div>
+        </div>
+        <div class="image-columns columns-3">
+          <div class="component component-1">
+            <img data-original="http://13.231.242.12:8000/images/5aefe6634cfad124ee0002b2/original.jpeg" class="image for-resize">
+          </div>
+          <div class="component component-2">
+          </div>
+          <div class="component component-3">
+          </div>
+        </div>
+        <div class="image-columns columns-2">
+          <div class="component component-1">
+            <img data-original="http://13.231.242.12:8000/images/5aefe6634cfad124ee0002b2/original.jpeg" class="image for-resize">
+          </div>
+          <div class="component component-2">
+          </div>
+        </div>
+        <div class="image-columns columns-1">
+          <div class="component component-1">
+            <img data-original="http://13.231.242.12:8000/images/5aefe6634cfad124ee0002b2/original.jpeg" class="image for-resize">
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
