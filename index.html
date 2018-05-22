@@ -36,7 +36,9 @@
         var images = document.getElementsByClassName('image for-resize')
         for (var i = 0; i < images.length; i++) {
           var src_url = images[i].dataset.original + '?width=' + images[i].offsetWidth + '&height=auto';
+          var src_2x_url = images[i].dataset.original + '?width=' + images[i].offsetWidth * 2 + '&height=auto';
           images[i].setAttribute("src", src_url);
+          images[i].setAttribute("srcset", src_2x_url + ' 2x');
         }
       });
     </script>
